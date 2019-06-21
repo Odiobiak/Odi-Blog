@@ -1,0 +1,11 @@
+git config --global user.name Odiobiak
+
+And clone the GitHub repository to the local folder using the link which we copied earlier: 
+
+git clone https://github.com/sbaidachni/testVSCode.git
+
+If the operation is successful, you should see something like this:
+
+
+That’s it – now you can use Visual Studio Code to open the cloned folder. VS Code will read all of the information about
+ the repository automatically. You can now start coding..
