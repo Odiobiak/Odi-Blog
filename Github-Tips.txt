@@ -9,3 +9,8 @@ If the operation is successful, you should see something like this:
 
 That’s it – now you can use Visual Studio Code to open the cloned folder. VS Code will read all of the information about
  the repository automatically. You can now start coding..
+
+
+ ##
+ to generate secret key in python
+ open python terminal and type this ...."import secret" then "secrets.token_hex(16)" 16 is any number you want
