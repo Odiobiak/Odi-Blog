@@ -7,13 +7,13 @@ app = Flask(__name__)
 
 #To set a secret key to avoid invalid access
 app.config['SECRET_KEY'] = 'fc5737e4e9c32412f223f91277f72b62'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'  #creating a db to store the information
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'  #creating a db to store the information on the same directory 
 #creating an instance of the database
 db = SQLAlchemy(app)
 
 #creating user models with the db
 class User(db.Model):
-    id =db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(20), unique=True, nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
     image_file = db.Column(db.String(20), nullable=False, default='default.jpg')
@@ -23,10 +23,11 @@ class User(db.Model):
     def __repr__(self):
         return f"User('{self.username}', '{self.email}', '{self.image_file}')"
 
+
 class Post(db.Model):
-    id =db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(20), nullable =False)
-    date_posted = db.Column(db.DateTime, nullable=False, default= datetime.utcnow)
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(100), nullable=False)
+    date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     content = db.Column(db.Text, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 

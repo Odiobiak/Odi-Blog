@@ -6,11 +6,17 @@ git clone https://github.com/sbaidachni/testVSCode.git
 
 If the operation is successful, you should see something like this:
 
-
+########################################################################################################
 That’s it – now you can use Visual Studio Code to open the cloned folder. VS Code will read all of the information about
  the repository automatically. You can now start coding..
 
 
- ##
+ ############################################################################################################
  to generate secret key in python
  open python terminal and type this ...."import secret" then "secrets.token_hex(16)" 16 is any number you want
+
+###########################################################
+to import Sql and create sql in python do...
+'from flaskblog(the name of the py page that you created the instance of the db)  import db
+then ...
+db.create_all() (this is an object that creates the database. it is created in your directory!)
