@@ -1,1 +1,0 @@
-building an azure function on vs code or visual studio 
