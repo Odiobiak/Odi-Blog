@@ -34,4 +34,4 @@ class LoginForm(FlaskForm):
         #confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), equal_to('password')])
 
         remember = BooleanField('Remeber Me')
-        submit = SubmitField('Sign Up')
+        submit = SubmitField('Sign In')
